@@ -3,139 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
-    <style>
-        body {
-            font-family: 'Raleway', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8; /* Lighter background color */
-        }
-
-        header {
-            background-color: #ff4d4d; /* Updated red background color */
-            color: #ffffff; /* White text */
-            text-align: center;
-            padding: 1em;
-            font-weight: 700; /* Bold font for the header */
-        }
-
-        section {
-            padding: 2em;
-            text-align: center;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px; /* Add border-radius for rounded corners */
-            margin-top: 20px; /* Add some margin at the top */
-        }
-
-        .pricing {
-            margin-top: 20px;
-        }
-
-        .pricing h3 {
-            color: #333;
-        }
-
-        .pricing button {
-            background-color: #ff4d4d; /* Updated red button color */
-            color: #fff;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-            margin: 10px;
-            border-radius: 20px; /* Add border-radius for rounded corners */
-            transition: background-color 0.3s ease; /* Add transition for a smooth hover effect */
-        }
-
-        .pricing button:hover {
-            background-color: #ff3333; /* Darker red on hover */
-        }
-
-        .contact-info {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .map-pin {
-            font-size: 24px;
-            color: #ff4d4d;
-            margin-right: 5px;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .social-icons a {
-            margin: 0 10px;
-            color: #333;
-            font-size: 24px;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 2em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            max-width: 100%;
-            box-sizing: border-box;
-        }
-
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>XiaomiSpeed - E-Scooter Tuning</title>
 </head>
-<body>
-    <header>
-        <h1 style="font-family: 'Raleway', sans-serif; font-weight: 700; letter-spacing: 1px;">mi.power.ch - E-Scooter Tuning</h1>
-    </header>
+<body class="font-sans">
 
-    <section>
-        <h2>Willkommen bei mi.power.ch!</h2>
-        <p>Wir spezialisieren uns im software (Controller)-tuning der Xiaomi-escooter ohne chip mit geschwindigkeiten von bis zu 80kmh.</p>
-        <p>Erlebe jetzt das versteckte potential deines e-scooters mit unseren drei Tuning-planen:</p>
-
-        <div class="pricing">
-            <h3>$30, Blitz30 - Bis zu 30km/h</h3>
-            <button onclick="callNow('+410762221692')">Jetzt Anrufen</button>
-
-            <h3>$40, Turbo40 - Bis zu 40km/h</h3>
-            <button onclick="callNow('+410762221692')">Jetzt Anrufen</button>
-
-            <h3>$70, Raser67 - Unlimitiert</h3>
-            <button onclick="callNow('+410762221692')">Jetzt Anrufen</button>
+    <!-- Navbar -->
+    <nav class="bg-red-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="ml-2 text-xl font-semibold">XiaomiSpeed</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#home" class="hover:text-gray-300">Home</a>
+                <a href="#videos" class="hover:text-gray-300">Bildergallerie</a>
+                <a href="#offer" class="hover:text-gray-300">Unser Angebot</a>
+                <a href="#contact" class="hover:text-gray-300">Kontakt</a>
+                <a href="#agreement" class="hover:text-gray-300">AGB</a>
+            </div>
         </div>
+    </nav>
 
-
-    <div class="contact-info">
-        <p><span class="map-pin">&#128205;</span> Basiert in Schaffhausen, Schweiz</p>
-        <p>Oder schreiben sie uns: <a href="sms:+410762221692">+41 076 222 16 92</a></p>
+    <!-- Full Screen Background Section -->
+<section id="home" class="bg-cover bg-center relative h-screen" style="background-image: url('XSL.jpg');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="container mx-auto h-full flex flex-col justify-center items-center relative z-10">
+        <h1 class="text-4xl font-bold text-white mb-4">Wilkommen bei XiaomiSpeed</h1>
+        <p class="text-lg text-white mb-8">Dein Xiaomi e-scooter tuning und reparatur spezialist in der Schweiz.</p>
+        <a href="#videos" class="relative group">
+            <span class="bg-yellow-500 opacity-80 group-hover:bg-yellow-400 opacity-100 text-white font-semibold py-2 px-6 rounded-full mb-4 inline-flex items-center transition duration-300 ease-in-out">
+                Termin Vereinbaren - Instagram
+            </span>
+        </a>
     </div>
+</section>
 
-    <div class="social-icons">
-        <a href="https://www.instagram.com/mi.power.ch" target="_blank"><img src="instagram-icon.png" alt="Unser Instagram"></a>
-        <!-- Replace "instagram-icon.png" with your Instagram icon image -->
-    </div>
 
-    <footer>
-        &copy; 2023 mi.power.ch - Alle Rechte vorbehalten - DsSoft Gruppe
-        <p>Bitte beachten Sie: Wir empfehlen ausdrücklich, die Höchstgeschwindigkeit von 20 km/h auf öffentlichen Straßen nicht zu überschreiten. Wir übernehmen keine Verantwortung für jegliche rechtliche oder sicherheitsrelevante Konsequenzen bei Missachtung dieser Empfehlung.</p>
+
+    <!-- Videos Section -->
+    <section id="videos" class="container mx-auto py-16">
+        <h2 class="text-3xl font-bold text-center mb-8">Unser 100+ km/h Flaggschiff-Scooter</h2>
+        <!-- Add pictures of your signature scooter here -->
+        <!-- Example: -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Image placeholders -->
+            <img src="image.jpg" alt="Bilder der MXS001" class="w-full h-auto mb-8">
+            <img src="image.jpg" alt="Bilder der MXS002" class="w-full h-auto mb-8">
+            <img src="image.jpg" alt="Bilder der MXS003" class="w-full h-auto mb-8">
+            <img src="image.jpg" alt="Bilder der MXS003" class="w-full h-auto mb-8">
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <!-- SMD Soldering and Modification Section -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Unser Handwerk</h2>
+            <p class="text-lg text-center mb-8">Mit jahrelanger erfahrung in verlöten von SMD komponenten und löten von sachen aller art bieten wir stets zuverlässige eigenbau teile an die die zuverlässigkeit ihres Scooters nicht beinflusst.</p>
+            <!-- Add more details about your expertise and experience here -->
+        </div>
+    </section>
+
+    <!-- Supported Scooters Section -->
+    <section class="container mx-auto py-16">
+        <h2 class="text-3xl font-bold text-center mb-8">Bei uns Tunebar</h2>
+        <div class="flex flex-wrap justify-center items-center space-x-4 mb-8">
+            <div class="bg-green-500 text-white py-2 px-4 rounded-full">Xiaomi M365*</div>
+            <div class="bg-green-500 text-white py-2 px-4 rounded-full">Xiaomi M365 Pro</div>
+            <div class="bg-green-500 text-white py-2 px-4 rounded-full">Xiaomi Mi 187*</div>
+            <div class="bg-green-500 text-white py-2 px-4 rounded-full">Xiaomi 1S</div>
+            <div class="bg-green-500 text-white py-2 px-4 rounded-full">Xiaomi Essential</div>
+            <div class="bg-green-500 text-white py-2 px-4 rounded-full">Xiaomi Mi 3</div>
+            <div class="bg-green-500 text-white py-2 px-4 rounded-full">Xiaomi Pro2</div>
+        </div>
+        <p class="text-center text-gray-700">Nicht Tunebar: Xiaomi Mi 4 Ultra, Mi 3 Lite, und Mi4 Pro</p>
+
+        <p class="text-center text-gray-700">Der Xiaomi M365 und 187 sind nur tunebar, sobald man das Dashboard sowie die Originale Steuerplatine auswechselt.</p>
+        <p class="text-center text-gray-700">Preis wird pro km/h verrechnet. Tune auf 30km/h 30CHF, 60kmh/h 60CHF etc, für dessen entfernung wird eine pauschale von 30CHF verrechnet.</p>
+    </section>
+
+    <!-- Offers -->
+    <section id="offer">
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Unser Angebot</h2>
+            <p class="text-lg text-center mb-8">Unser breites angebot streckend von einfachen software-tunes bis zum VESC einbau und akkubau ist sehr vielfälltig, wir reparieren auch jeden scooter den wir als unterstützt oben angeben. Akkubau aller art auf an anfrage sowie VESC einbau für extreme geschwindigkeiten von 100km/h und mehr ebenso per anfrage bitte per mail an: info@dssoft.ch.</p>
+            <!-- Add more details about your expertise and experience here -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto py-16">
+        <h2 class="text-3xl font-bold text-center mb-8">Kontakt</h2>
+        <p class="text-lg text-center mb-8">Telefonisch bitte zwischen 12:10-13:10 und 17:15-20:00 an +41 76 222 16 92</p>
+        <p class="text-lg text-center mb-8">Per mail 24/7 an info@dssoft.ch</p>
+        <p class="text-lg text-center mb-8">Unsere bevorzugte methode ist eine DM an @xiaomispeed auf Instagram</p>
+        <!-- Add a contact form here -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>&copy; 2024 XiaomiSpeed - E-Scooter Tuning | Bitte Vor der buchung die AGB beachten!</p>
     </footer>
 
-    <script>
-        function callNow(phoneNumber) {
-            window.location.href = 'tel:' + phoneNumber;
-        }
-    </script>
 </body>
 </html>
