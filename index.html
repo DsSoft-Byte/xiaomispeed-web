@@ -9,22 +9,45 @@
 </head>
 <body class="font-sans">
 
-    <!-- Navbar -->
-    <nav class="bg-red-600 text-white p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center">
-                <span class="ml-2 text-xl font-semibold">XiaomiSpeed</span>
-            </div>
-            <div class="flex items-center space-x-4">
-                <!-- Add responsive class for small screens -->
-                <a href="#home" class="hover:text-gray-300 hidden md:inline">Home</a>
-                <a href="#videos" class="hover:text-gray-300 hidden md:inline">Bildergallerie</a>
-                <a href="#offer" class="hover:text-gray-300 hidden md:inline">Unser Angebot</a>
-                <a href="#contact" class="hover:text-gray-300 hidden md:inline">Kontakt</a>
-                <a href="https://xiaomispeed.vip/AGB" class="hover:text-gray-300 hidden md:inline">AGB</a>
-            </div>
+<!-- Navbar -->
+<nav class="bg-red-600 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+            <span class="ml-2 text-xl font-semibold">XiaomiSpeed</span>
         </div>
-    </nav>
+        <!-- Responsive menu button for mobile -->
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-white hover:text-gray-300 focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Navigation links for desktop -->
+        <div class="hidden md:flex items-center space-x-4">
+            <a href="#home" class="hover:text-gray-300">Home</a>
+            <a href="#videos" class="hover:text-gray-300">Bildergallerie</a>
+            <a href="#offer" class="hover:text-gray-300">Unser Angebot</a>
+            <a href="#contact" class="hover:text-gray-300">Kontakt</a>
+            <a href="https://xiaomispeed.vip/AGB" class="hover:text-gray-300">AGB</a>
+        </div>
+    </div>
+    <!-- Responsive menu for mobile -->
+    <div id="mobile-menu" class="md:hidden hidden">
+        <a href="#home" class="block p-2 hover:bg-gray-700">Home</a>
+        <a href="#videos" class="block p-2 hover:bg-gray-700">Bildergallerie</a>
+        <a href="#offer" class="block p-2 hover:bg-gray-700">Unser Angebot</a>
+        <a href="#contact" class="block p-2 hover:bg-gray-700">Kontakt</a>
+        <a href="https://xiaomispeed.vip/AGB" class="block p-2 hover:bg-gray-700">AGB</a>
+    </div>
+</nav>
+
+<script>
+    // Toggle mobile menu visibility
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+</script>
 
     <!-- Full Screen Background Section -->
     <section id="home" class="bg-cover bg-center relative md:h-screen" style="background-image: url('XSL.jpg');">
@@ -68,4 +91,42 @@
     <section class="container mx-auto py-8 md:py-16">
         <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-8">Bei uns Tunebar</h2>
         <div class="flex flex-wrap justify-center items-center space-x-4 mb-4 md:mb-8">
-            <div class="bg-green
+            <div class="bg-green500 text-white py-2 px-4 md:py-3 md:px-6 rounded-full">Xiaomi M365*</div>
+            <div class="bg-green-500 text-white py-2 px-4 md:py-3 md:px-6 rounded-full">Xiaomi M365 Pro</div>
+            <div class="bg-green-500 text-white py-2 px-4 md:py-3 md:px-6 rounded-full">Xiaomi Mi 187*</div>
+            <div class="bg-green-500 text-white py-2 px-4 md:py-3 md:px-6 rounded-full">Xiaomi 1S</div>
+            <div class="bg-green-500 text-white py-2 px-4 md:py-3 md:px-6 rounded-full">Xiaomi Essential</div>
+            <div class="bg-green-500 text-white py-2 px-4 md:py-3 md:px-6 rounded-full">Xiaomi Mi 3</div>
+            <div class="bg-green-500 text-white py-2 px-4 md:py-3 md:px-6 rounded-full">Xiaomi Pro2</div>
+        </div>
+        <p class="text-center text-md md:text-lg text-gray-700 mb-4 md:mb-8">Nicht Tunebar: Xiaomi Mi 4 Ultra, Mi 3 Lite, und Mi4 Pro</p>
+
+        <p class="text-center text-md md:text-lg text-gray-700 mb-4 md:mb-8">Der Xiaomi M365 und 187 sind nur tunebar, sobald man das Dashboard sowie die Originale Steuerplatine auswechselt.</p>
+        <p class="text-center text-md md:text-lg text-gray-700">Preis wird pro km/h verrechnet. Tune auf 30km/h 30CHF, 60km/h 60CHF, etc. Für dessen Entfernung wird eine Pauschale von 30CHF verrechnet.</p>
+    </section>
+
+    <!-- Offers -->
+    <section id="offer" class="bg-gray-100 py-8 md:py-16">
+        <div class="container mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-8">Unser Angebot</h2>
+            <p class="text-md md:text-lg text-center mb-4 md:mb-8">Unser breites Angebot streckt sich von einfachen Software-Tunes bis zum VESC-Einbau und Akkubau. Es ist sehr vielfältig. Wir reparieren auch jeden Scooter, den wir als unterstützt oben angeben. Akkubau aller Art auf Anfrage sowie VESC-Einbau für extreme Geschwindigkeiten von 100km/h und mehr ebenfalls per Anfrage bitte per Mail an: info@dssoft.ch.</p>
+            <!-- Add more details about your expertise and experience here -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto py-8 md:py-16">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-8">Kontakt</h2>
+        <p class="text-md md:text-lg text-center mb-4 md:mb-8">Telefonisch bitte zwischen 12:10-13:10 und 17:15-20:00 an +41 76 222 16 92</p>
+        <p class="text-md md:text-lg text-center mb-4 md:mb-8">Per Mail 24/7 an info@dssoft.ch</p>
+        <p class="text-md md:text-lg text-center mb-4 md:mb-8">Unsere bevorzugte Methode ist eine DM an @xiaomispeed auf Instagram</p>
+        <!-- Add a contact form here -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p class="text-md md:text-lg">&copy; 2024 XiaomiSpeed - E-Scooter Tuning | Bitte vor der Buchung die AGB beachten!</p>
+    </footer>
+
+</body>
+</html>
